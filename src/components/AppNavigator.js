@@ -9,6 +9,7 @@ import State from './State';
 import Home from './Home';
 import TextInputs from './TextInputs';
 import Scroll from './Scroll';
+import FlatListing from './FlatListing';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ function AppNavigator() {
         <Stack.Screen name="State" component={State} />
         <Stack.Screen name="TextInputs" component={TextInputs} />
         <Stack.Screen name="Scroll" component={Scroll} />
+        <Stack.Screen name="Flatlisting" component={FlatListing} />
       </Stack.Navigator>
     </NavigationContainer>
   );

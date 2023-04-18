@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Text, TextInput, View, Button} from 'react-native';
 //generate icecream per word entered by user
-const TextInputs = () => {
+const TextInputs = ({navigation}) => {
   const [text, setText] = useState('');
   return (
     <View style={{padding:10}}>
