@@ -1,7 +1,7 @@
 // The FlatList component requires two props: data and renderItem. data is the source of information for the list. renderItem takes one item from the source and returns a formatted component to render.
 
 import React from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View, Button} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     },
   });
 
-const FlatListing = () => {
+const FlatListing = ({navigation}) => {
   return (
     <View style={styles.container}>
       <FlatList
@@ -33,6 +33,7 @@ const FlatListing = () => {
       }
       renderItem={({item})=> <Text style={styles.item}>{item.key}</Text>}
       />
+<Button title='Go Back to Scroll' onPress={()=> navigation.goBack()}/>
     </View>
   )
 }
